@@ -1,4 +1,6 @@
 .idea
 tests
+conf/app.conf
+
 study.md
 test.html
