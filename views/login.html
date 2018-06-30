@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="static/css/base.css">
     <script src="static/js/jquery.js"></script>
     <script src="static/bootstrap/js/bootstrap.js"></script>
+    <script src="static/js/ui.js"></script>
     <title>alertme</title>
 </head>
 
@@ -20,11 +21,11 @@
                 <form>
                     <div class="form-group">
                         <label for="username ">用户名</label>
-                        <input type="text" class="form-control " id="username" placeholder="请输入用户名">
+                        <input type="text" class="form-control " id="login-username" placeholder="请输入用户名">
                     </div>
                     <div class="form-group">
                         <label for="password">密码</label>
-                        <input type="password" class="form-control" id="password" placeholder="请输入密码">
+                        <input type="password" class="form-control" id="login-password" placeholder="请输入密码">
                     </div>
                     <div class="checkbox">
                         <label>
@@ -32,13 +33,13 @@
                         </label>
                         <a class="myright" href="/register">立即注册</a>
                     </div>
-                    <button type="submit" class="btn btn-success form-control">登录</button>
+                    <button type="submit" id="login-btn" class="btn btn-success form-control">登录</button>
                 </form>
             </div>
         </div>
     </div>
     <div class="footer">
-        <p class="my-login-footer-pd">copyright&copy; 小米粥</p>
+        <p id="footer" class="my-login-footer-pd">copyright&copy; 小米粥</p>
     </div>
 </body>
 
