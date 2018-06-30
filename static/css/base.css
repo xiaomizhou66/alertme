@@ -2,8 +2,18 @@ body {
     background: url("../img/background.png");
 }
 
+/* 阿里图标引入方法 */
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
 .my-login-box-mg {
-    margin: 10% auto;
+    margin-top: 10%;
 }
 
 .my-register-box-mg {
@@ -24,6 +34,16 @@ form {
     float: right;
 }
 
-.container .col-lg-12 .my-login-footer-pd {
-    padding-bottom: 0px;
+body {
+    position: relative;
+}
+
+.footer {
+    text-align: center;
+    width: 20%;
+    height: 30px;
+    line-height: 30px;
+    position: fixed;
+    bottom: 0px;
+    left: 40%;
 }
