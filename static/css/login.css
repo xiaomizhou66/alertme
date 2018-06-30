@@ -1,0 +1,29 @@
+body {
+    background: url("../img/background.png");
+}
+
+.my-login-box-mg {
+    margin: 10% auto;
+}
+
+.my-register-box-mg {
+    margin: 5% auto;
+}
+
+form {
+    background: #cccccc;
+    /*     width: 260px;
+    height: 260px; */
+    margin: 35px auto;
+    padding: 30px;
+    box-shadow: 0px 1px 2px 1px #aaaaaa, inset 0px 1px 1px rgba(255, 255, 255, 0.7);
+    border-radius: 3px;
+}
+
+.checkbox .myright {
+    float: right;
+}
+
+.container .col-lg-12 .my-login-footer-pd {
+    padding-bottom: 0px;
+}
