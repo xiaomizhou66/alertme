@@ -12,13 +12,11 @@ $(document).ready(function () {
             "Email": emailaddress
         }
         $.ajax({
-            url: "http://127.0.0.1:8080/api/register",
+            url: "/api/register",
             type: "post",
             dataType: "json",
             data: JSON.stringify(user),
             success: function (responseData) {
-
-
                 window.location = "/";
             },
             error: function (responseData) {
