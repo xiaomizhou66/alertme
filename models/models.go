@@ -2,7 +2,6 @@ package models
 
 import (
     "fmt"
-    "time"
     "regexp"
 
     "github.com/astaxie/beego/orm"
@@ -19,7 +18,7 @@ func init() {
     orm.RegisterDriver("mysql", orm.DRMySQL)
     orm.RegisterDataBase("default", "mysql", dbUrl)
     orm.RegisterModel(new(Task), new(User))
-    orm.RunSyncdb("default", false, false)
+    orm.RunSyncdb("default", false, true)
 }
 
 type User struct {
@@ -47,8 +46,9 @@ func (u *User) Invalid() bool {
 
 type Task struct {
     Id        int
-    Age       int16
-    User      *User `orm:"rel(fk)"` // 设置一对一反向关系(可选)
-    StartTime time.Time
-    EndTime   time.Time
+    Content   string
+    User      *User `orm:"rel(fk)" json:"-"` // 设置一对一反向关系(可选)
+    Status    int
+    StartTime int64
+    EndTime   int64
 }

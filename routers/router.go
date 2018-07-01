@@ -11,11 +11,10 @@ func init() {
     beego.Router("/register", &controllers.RegisterController{})
     beego.Router("/home", &controllers.HomeController{})
 
-
     // api 开头的都是返回 json 数据
     beego.Router("/api/user", &controllers.User{})
     beego.Router("/api/register", &controllers.Manager{}, "post:Register")
     beego.Router("/api/login", &controllers.Manager{}, "post:Login")
-
+    beego.Router("/api/task", &controllers.Task{})
 
 }
