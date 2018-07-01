@@ -2,7 +2,7 @@
 $(function () {
     var img = $("#imgurl");
     $.ajax({
-        url: "http://127.0.0.1:8080/api/user",
+        url: "/api/user",
         type: "get",
         dataType: "json",
         /* data: 代表发送给后端的数据，这没有发送数据，不存在data*/
