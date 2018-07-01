@@ -1,12 +1,13 @@
 package controllers
 
 import (
+    "time"
+    "fmt"
+    "encoding/json"
+
     "github.com/astaxie/beego"
     "github.com/astaxie/beego/orm"
-    "fmt"
     "github.com/xiaomizhou66/alertme/models"
-    "encoding/json"
-    "time"
 )
 
 const (
@@ -49,7 +50,6 @@ func (c *Auth) Prepare() {
     var u = models.User{
         Username: ck.Value,
     }
-    fmt.Printf("%#v", u)
 
     o := orm.NewOrm()
     if err := o.Read(&u, "Username"); err != nil {
@@ -59,6 +59,7 @@ func (c *Auth) Prepare() {
         return
     }
     c.Data[CURR_USER] = u
+    c.Data["ID"] = u.Id
 
 }
 
@@ -136,4 +137,49 @@ type User struct {
 func (c *User) Get() {
     c.Data["json"] = c.Data[CURR_USER]
     c.ServeJSON()
+}
+
+type Task struct {
+    Auth
+}
+
+func (c *Task) Get() {
+    user := c.Data[CURR_USER].(models.User)
+    var res = make([]models.Task, 0)
+    o := orm.NewOrm()
+    qs := o.QueryTable("task")
+
+    qs.Filter("user_id", user.Id).All(&res)
+    c.Data["json"] = res
+    c.ServeJSON()
+}
+
+func (c *Task) Post() {
+    var t models.Task
+    if err := json.Unmarshal(c.Ctx.Input.RequestBody, &t); err != nil {
+        c.Ctx.Output.Status = 400
+        c.StaMsg(400, err.Error())
+        c.ServeJSON()
+        return
+    }
+
+    u := c.Data[CURR_USER].(models.User)
+    //u.Tasks = append(u.Tasks, &t)
+    t.User = &u
+
+    fmt.Printf("%#v", t)
+
+    o := orm.NewOrm()
+
+    id, err := o.Insert(&t)
+    if err != nil {
+        c.StaMsg(500, err.Error())
+        c.ServeJSON()
+        return
+    }
+
+    c.StaMsg(200, fmt.Sprintf("task id=%d", id))
+    c.ServeJSON()
+    return
+
 }
