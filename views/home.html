@@ -10,12 +10,144 @@
     <link rel="stylesheet" href="static/css/base.css">
     <script src="static/js/jquery.js"></script>
     <script src="static/bootstrap/js/bootstrap.js"></script>
+    <script src="http://at.alicdn.com/t/font_727466_9tbw33chdo5.js"></script>
+    <script src="static/js/ui-home.js"></script>
     <title>alertme</title>
 </head>
 
 <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <ul class="my-home-caption-menu nav nav-pills navbar-left">
+                <li role="presentation">
+                    <a class="navbar-brand" href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-caidan"></use>
+                        </svg>
+                        我的
+                        <span>待办</span>
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-jindu1"></use>
+                        </svg>
+                        <span id="badge" class="badge"></span>
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-email"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-alert-message"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+            <ul class="my-home-caption-search nav nav-pills  navbar-right">
+                <li>
+                    <a href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-xingtaiduICON_sousuo--"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="userimg">
+                    <div class="btn-group">
+                        <a type="button" class="btn btn-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img id="imgurl" src="#" alt="头像" />
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="#" id="user-id"></a>
+                            </li>
+                            <li>
+                                <a href="#" id="user-name"></a>
+                            </li>
+                            <li>
+                                <a href="#" id="user-email"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a id="home-logout" href="#">
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-Group"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+            </ul>
+        </div>
+    </nav>
     <div class="container">
-
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-success">
+                    <div class="panel-heading">事项列表</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <ul id="list-group1" class="list-group">
+                                    <li class="list-group-item ">
+                                        <input type="checkbox" name="things" id="things1" />1
+                                        <span class="badge">1</span>
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-shanchu1"></use>
+                                        </svg>
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-bianji"></use>
+                                        </svg>
+                                        <svg class="icon" aria-hidden="true">
+                                            <use xlink:href="#icon-wancheng"></use>
+                                        </svg>
+                                        <div class="clearfloat"> </div>
+                                    </li>
+                                    <li class="list-group-item ">
+                                            <input type="checkbox" name="things" id="things1" />2
+                                            <span class="badge">2</span>
+                                            <svg id="shanchu"class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-shanchu1"></use>
+                                            </svg>
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-bianji"></use>
+                                            </svg>
+                                            <svg class="icon" aria-hidden="true">
+                                                <use xlink:href="#icon-wancheng"></use>
+                                            </svg>
+                                            <div class="clearfloat"> </div>
+                                        <div class="clearfloat"> </div>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <div class="clearfloat"> </div>
+                                    </li>
+                                    <li class="list-group-item ">
+                                        <div class="clearfloat"> </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6">
+                                <ul id="list-group2">
+                                    <!--                                     <li class="list-group-item "></li>
+                                    <li class="list-group-item "></li>
+                                    <li class="list-group-item "></li>
+                                    <li class="list-group-item "></li> -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="footer">
         <p class="my-login-footer-pd">copyright&copy; 小米粥</p>

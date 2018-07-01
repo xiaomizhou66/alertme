@@ -2,7 +2,12 @@ body {
     background: url("../img/background.png");
 }
 
-/* 阿里图标引入方法 */
+ul,
+ol {
+    list-style: none;
+}
+
+/* 阿里图标引入 ----------------------------------------------------------------------*/
 
 .icon {
     width: 1em;
@@ -11,6 +16,8 @@ body {
     fill: currentColor;
     overflow: hidden;
 }
+
+/* 登录、注册页面样式 -------------------------------------------------------------------------*/
 
 .my-login-box-mg {
     margin-top: 10%;
@@ -30,7 +37,7 @@ form {
     border-radius: 3px;
 }
 
-.checkbox .myright {
+.myright {
     float: right;
 }
 
@@ -46,4 +53,64 @@ body {
     position: fixed;
     bottom: 0px;
     left: 40%;
+}
+
+/* 主页样式 -----------------------------------------------------------------------------*/
+
+.my-home-caption-menu,
+.my-home-caption-search {
+    height: 15px;
+    line-height: 15px;
+    font-size: 15px;
+    padding: 8px 8px 0px 15px;
+    margin-bottom: -10px;
+}
+
+.my-home-caption-menu {
+    padding-right: 30px;
+}
+
+.my-home-caption-menu span {
+    color: rgb(223, 130, 130);
+}
+
+
+#imgurl {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 25px;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 8px;
+}
+.navbar{
+    position: relative;
+}
+.userimg .usermassge {
+    /*  display: none; */
+    position: absolute;
+    top: 30px;
+    right: 30px;
+}
+
+#imgurl:hover .usermassge {
+    display: block;
+}
+/* 待办事项列表样式 */
+.list-group-item input,
+.list-group-item .badge{
+   float: left;
+   margin-right: 8px;
+   
+}
+
+.list-group-item .icon{
+   float: right;
+   margin-left: 8px;
+   cursor: pointer;
+  
+}
+.clearfloat{
+    clear: both;
 }
