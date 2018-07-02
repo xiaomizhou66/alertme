@@ -16,6 +16,8 @@
 </head>
 
 <body>
+
+    <!--导航部分 -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <ul class="my-home-caption-menu nav nav-pills navbar-left">
@@ -89,69 +91,107 @@
             </ul>
         </div>
     </nav>
+
+    <!--事项列表部分主体 。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。 -->
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel panel-success">
-                    <div class="panel-heading">事项列表</div>
+
+                    <!--任务列表开始 -->
+                    <div class="panel-heading">
+                        事项列表
+                    </div>
                     <div class="panel-body">
                         <div class="row">
                             <div class="col-lg-6">
                                 <ul id="list-group1" class="list-group">
-                                    <li class="list-group-item ">
-                                        <input type="checkbox" name="things" id="things1" />1
-                                        <span class="badge">1</span>
-                                        <svg class="icon" aria-hidden="true">
-                                            <use xlink:href="#icon-shanchu1"></use>
-                                        </svg>
-                                        <svg class="icon" aria-hidden="true">
-                                            <use xlink:href="#icon-bianji"></use>
-                                        </svg>
-                                        <svg class="icon" aria-hidden="true">
-                                            <use xlink:href="#icon-wancheng"></use>
-                                        </svg>
-                                        <div class="clearfloat"> </div>
-                                    </li>
-                                    <li class="list-group-item ">
-                                            <input type="checkbox" name="things" id="things1" />2
-                                            <span class="badge">2</span>
-                                            <svg id="shanchu"class="icon" aria-hidden="true">
-                                                <use xlink:href="#icon-shanchu1"></use>
-                                            </svg>
-                                            <svg class="icon" aria-hidden="true">
-                                                <use xlink:href="#icon-bianji"></use>
-                                            </svg>
-                                            \lass="icon" aria-hidden="true">
-                                                <use xlink:href="#icon-wancheng"></use>
-                                            </svg>
-                                            <div class="clearfloat"> </div>
-                                        <div class="clearfloat"> </div>
-                                    </li>
-                                    <li class="list-group-item ">
-                                        <div class="clearfloat"> </div>
-                                    </li>
-                                    <li class="list-group-item ">
-                                        <div class="clearfloat"> </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6">
-                                <ul id="list-group2">
-                                    <!--                                     <li class="list-group-item "></li>
-                                    <li class="list-group-item "></li>
-                                    <li class="list-group-item "></li>
-                                    <li class="list-group-item "></li> -->
+                                    <!-- 后端获取数据来展示 -->
                                 </ul>
                             </div>
                         </div>
+                        <div class="col-lg-6">
+                            <ul id="list-group2">
+                                <!-- 已完成列表，用户操作后展示 -->
+                            </ul>
+                        </div>
                     </div>
+                    <!--任务列表结束 -->
+
+                    <!-- 新建任务 弹窗开始。。。。。。。。。。。。。。。。。。。。。。。。。。 -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list-group myright">
+                                <button id="addbtn" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                                    +新建任务
+                                </button>
+                                <!-- 模态框（Modal） -->
+                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                                    &times;
+                                                </button>
+                                                <p class="modal-title" id="myModalLabel">
+                                                    新建任务
+                                                </p>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form role="form">
+                                                    <div class="form-group">
+                                                        <p>
+                                                            <label for="add-title">任务名称</label>
+                                                        </p>
+                                                        <input type="text" id="add-title" name="add-title" placeholder="请输入任务名称">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <p>
+                                                            <label for="add-content">任务内容</label>
+                                                        </p>
+                                                        <textarea class="form-control" id="add-content" name="add-content" rows="3" placeholder="请输入具体任务"></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <p>
+                                                            <label for="add-title">开始时间</label>
+                                                        </p>
+                                                        <input type="date" name="bday">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <p>
+                                                            <label for="add-title">结束时间</label>
+                                                        </p>
+                                                        <input type="date" name="bday">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                                            </button>
+                                            <button id="modal-footer-submit" type="button" class="btn btn-primary">
+                                                确认提交
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 新建任务 弹窗结束 -->
+
                 </div>
             </div>
         </div>
     </div>
+    </div>
+
     <div class="footer">
         <p class="my-login-footer-pd">copyright&copy; 小米粥</p>
     </div>
+
+
+
 </body>
 
 </html>

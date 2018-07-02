@@ -1,4 +1,5 @@
-/* 前后端注册交互 */
+/* 前后端注册交互 -------------------------------------------------------------------*/
+/* 前端将（构造的）jquery对象集合，转化为json数据给后端 */
 $(document).ready(function () {
     $("#register-btn").click(function () {
         var username = $("#register-username").val();

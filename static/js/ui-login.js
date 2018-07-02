@@ -1,4 +1,6 @@
-/* 前后端登录交互 */
+/* 前后端登录交互----------------------------------------------------------------------------- */
+/* 从前端获取jquery对象（对象集合）
+转化为json格式（将对象集合用JSON.stringify()转化为json格式数据），给后端 */
 $(function () {
     $("#login-btn").click(function () {
         var username = $("#login-username").val();
@@ -15,13 +17,13 @@ $(function () {
             data: JSON.stringify(user),
             /* 这个data是前端用户输入的数据，要提交给后台 */
             /*  JSON.stringify()方法把js对象转变为json格式给后端 */
-            success: function (responseData) {
+            success: function (responseTrueData) {
                 window.location = "/home";
             },
-            error: function (responseData) {
-                console.log(responseData);
-                // console.log(responseData.responseJSON.message); /* 获取错误提示 */
-                console.log(responseData.status); /* 获取服务返回的错误状态码 */
+            error: function (responseFalseData) {
+                console.log(responseFalseData);
+                // console.log(responseFalseData.responseJSON.message); /* 获取错误提示 */
+                console.log(responseFalseData.status); /* 获取服务返回的错误状态码 */
             }
 
         })

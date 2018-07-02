@@ -74,7 +74,6 @@ body {
     color: rgb(223, 130, 130);
 }
 
-
 #imgurl {
     display: inline-block;
     width: 20px;
@@ -84,9 +83,11 @@ body {
     background-color: white;
     font-size: 8px;
 }
-.navbar{
+
+.navbar {
     position: relative;
 }
+
 .userimg .usermassge {
     /*  display: none; */
     position: absolute;
@@ -97,20 +98,57 @@ body {
 #imgurl:hover .usermassge {
     display: block;
 }
+
 /* 待办事项列表样式 */
+
 .list-group-item input,
-.list-group-item .badge{
-   float: left;
-   margin-right: 8px;
-   
+.list-group-item .badge {
+    float: left;
+    margin-right: 8px;
 }
 
-.list-group-item .icon{
-   float: right;
-   margin-left: 8px;
-   cursor: pointer;
-  
+.list-group-item .icon {
+    float: right;
+    margin-left: 8px;
+    cursor: pointer;
 }
-.clearfloat{
+
+.clearfloat {
     clear: both;
+}
+
+/* 添加待办事项框样式 */
+
+#addbtn {
+    font-size: 12px;
+    height: 16px;
+    line-height: 14px;
+    padding: 2px 0px;
+}
+
+.modal-header {
+    background-color: #dff0d8;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+#myModalLabel {
+    font-size: 20px;
+    color: chocolate;
+    font-weight: 700;
+}
+
+.form-group {
+    padding-bottom: 5px;
+    border-bottom: 1px dashed gray;
+}
+
+.form-group p {
+    margin-bottom: -5px;
+}
+
+.modal-body {
+    background: url("../img/background.png");
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
